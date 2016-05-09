@@ -18,11 +18,8 @@ class App extends React.Component {
 			videos: [],
 			selectedVideo: null
 		};
-
 		
-
 		this.videoSearch('');
-
 	}
 
 	videoSearch(term){
@@ -33,7 +30,6 @@ class App extends React.Component {
 			});
 		});
 	}
-
 
 	render(){
 		const videoSearch = _.debounce((term) => {this.videoSearch(term)}, 300);
@@ -52,5 +48,5 @@ class App extends React.Component {
 
 render(
 	<App />,
-	document.getElementById('app')
+	document.querySelector('.container')
 );
